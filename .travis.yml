@@ -1,0 +1,15 @@
+language: rust
+jobs:
+  include:
+    - stage: build
+      script:
+        - rustup target add x86_64-unknown-linux-musl
+        - cargo build --target x86_64-unknown-linux-musl --release
+      deploy:
+        provider: releases
+        api_key: $GITHUB_OAUTH_TOKEN
+        file: target/x86_64-unknown-linux-musl/release/bulkrename
+        skip_cleanup: true
+        on:
+          tags: true
+

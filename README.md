@@ -1,5 +1,9 @@
 # bulkrename
 
+[![Build Status](https://travis-ci.org/Soft/bulkrename.svg?branch=master)](https://travis-ci.org/Soft/bulkrename)
+[![GitHub release](https://img.shields.io/github/release/Soft/bulkrename.svg)](https://github.com/Soft/bulkrename/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 `bulkrename` is a tool for easily renaming large numbers of files.
 
 `bulkrename` accepts file paths either via command line arguments or via
