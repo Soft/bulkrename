@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/Soft/bulkrename.svg)](https://github.com/Soft/bulkrename/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-`bulkrename` is a tool for easily renaming large numbers of files.
+`bulkrename` is a tool for renaming large numbers of files.
 
 `bulkrename` accepts file paths either via command line arguments or via
 standard input. When invoked, `bulkrename` opens a file in `EDITOR` with the
@@ -18,7 +18,11 @@ basically the same way.
 ## Usage
 
 ``` shell
-bulkrename [FILE]...
+usage: bulkrename [-h|--help] [FILE]...
+bulkrename is a tool for renaming large numbers of files.
+
+options:
+  -h, --help:        display this help
 ```
 
 ## Examples
