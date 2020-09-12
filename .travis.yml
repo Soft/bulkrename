@@ -12,8 +12,7 @@ jobs:
       deploy:
         provider: releases
         token: $GITHUB_OAUTH_TOKEN
-        file: bulkrename-"${TRAVIS_TAG:-untagged}".tar.gz
-        cleanup: false
+        file: bulkrename-*.tar.gz
         edge: true
         on:
           tags: true
