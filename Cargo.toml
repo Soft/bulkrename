@@ -1,0 +1,19 @@
+[package]
+name = "bulkrename"
+version = "0.1.0"
+description = "bulkrename is a tool for easily renaming large numbers of files."
+readme = "README.md"
+homepage = "https://github.com/Soft/bulkrename"
+repository = "https://github.com/Soft/bulkrename"
+authors = ["Samuel Laurén <samuel.lauren@iki.fi>"]
+edition = "2018"
+license = "MIT"
+
+[profile.release]
+lto = true
+panic = "abort"
+
+[dependencies]
+tempfile = "3.1.0"
+thiserror = "1.0.20"
+libc = "0.2.77"
