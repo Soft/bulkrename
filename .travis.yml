@@ -6,7 +6,9 @@ jobs:
         - rustup target add x86_64-unknown-linux-musl
         - cargo build --target x86_64-unknown-linux-musl --release
         - strip target/x86_64-unknown-linux-musl/release/bulkrename
-        - tar -czvf bulkrename-"${TRAVIS_TAG:-untagged}".tar.gz -C ./target/x86_64-unknown-linux-musl/release bulkrename
+        - mkdir target/work
+        - cp -t target/work LICENSE README.md target/x86_64-unknown-linux-musl/release/bulkrename
+        - tar -czvf bulkrename-"${TRAVIS_TAG:-untagged}".tar.gz -C target/work .
       deploy:
         provider: releases
         token: $GITHUB_OAUTH_TOKEN

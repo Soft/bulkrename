@@ -17,7 +17,7 @@ basically the same way.
 
 ## Usage
 
-``` shell
+```
 usage: bulkrename [-h|--help] [FILE]...
 bulkrename is a tool for renaming large numbers of files.
 
