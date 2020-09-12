@@ -5,11 +5,14 @@ jobs:
       script:
         - rustup target add x86_64-unknown-linux-musl
         - cargo build --target x86_64-unknown-linux-musl --release
+        - strip target/x86_64-unknown-linux-musl/release/bulkrename
+        - tar -czvf bulkrename-"${TRAVIS_TAG:-untagged}".tar.gz -C ./target/x86_64-unknown-linux-musl/release bulkrename
       deploy:
         provider: releases
-        api_key: $GITHUB_OAUTH_TOKEN
-        file: target/x86_64-unknown-linux-musl/release/bulkrename
-        skip_cleanup: true
+        token: $GITHUB_OAUTH_TOKEN
+        file: bulkrename-"${TRAVIS_TAG:-untagged}".tar.gz
+        cleanup: false
+        edge: true
         on:
           tags: true
 
