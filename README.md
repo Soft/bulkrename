@@ -37,6 +37,8 @@ bulkrename is a tool for renaming large numbers of files.
 
 options:
   -h, --help:        display this help
+  -r, --replace:     allow replacing existing files
+  -q, --quiet:       do not display information about operations being performed
 ```
 
 ## Examples
